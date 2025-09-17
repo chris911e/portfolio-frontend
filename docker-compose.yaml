@@ -1,0 +1,12 @@
+services:
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: oauth
+    volumes:
+      - ./sqlc/migrations/oauth:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
