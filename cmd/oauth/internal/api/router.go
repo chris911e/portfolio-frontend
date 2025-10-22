@@ -2,7 +2,7 @@ package api
 
 import (
 	"piffels/sqlc/oauthdb"
-	"piffels/cmd/oauth/internal/middleware"
+	"piffels/pkg/middleware"
 
 	"github.com/gorilla/mux"
 
@@ -12,13 +12,10 @@ import (
 func Router(queries *oauthdb.Queries, ctx context.Context) *mux.Router {
 	h := NewHandler(queries, ctx)
 
-	// initialize API router
 	r := mux.NewRouter()
 
-	// use middleware
 	r.Use(middleware.Logger)
 
-	// create subrouter "v1" (versioning)
 	v1 := r.PathPrefix("/v1").Subrouter()
 
 	// register routes
