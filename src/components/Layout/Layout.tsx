@@ -1,15 +1,13 @@
 import { Outlet } from "react-router";
+import Taskbar from "./Taskbar";
+import Footer from "./Footer";
 
 export default function Layout() {
     return(
         <div>
-            <div>
-                Taskbar test
-            </div>
+            <Taskbar />
             <Outlet />
-            <div>
-                Footer test
-            </div>
+            <Footer />
         </div>
     )
 }
