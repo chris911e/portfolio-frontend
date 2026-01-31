@@ -5,9 +5,14 @@ import Home from './pages/Home'
 
 export default function App() {
   return (
-    <div style={{
-      fontFamily: "Fira Code"
-    }}>
+    <div
+      className='
+        bg-[#101411]
+        text-white
+        min-h-screen
+        font-[Fira_Code]
+      '
+    >
         <BrowserRouter>
             <Routes>
                 <Route path='/' element={<Layout />}>
