@@ -1,4 +1,6 @@
+import Entry from "../components/Entry";
 import Profile from "../components/Profile";
+import Tabbed from "../components/Tabbed";
 import Typewriter from "../components/Typewriter";
 
 export default function Home() {
@@ -10,8 +12,15 @@ export default function Home() {
                 gap-4
             "
         >
+            <div className="col-span-3 flex justify-center">
+                <Profile url="/pixelated.png" />
+            </div>
             <div>
-                Column 1
+                <Tabbed>
+                    <Entry link={true} copy={true}>
+                        H
+                    </Entry>
+                </Tabbed>
             </div>
             <div
                 className="
@@ -21,8 +30,12 @@ export default function Home() {
                     gap-2
                 "
             >
-                <Profile url="/dawg.jpg" />
-                <div className="text-center text-xl">
+                <div
+                    className="
+                        text-center
+                        text-2xl
+                    "
+                >
                     Chris
                 </div>
                 <Typewriter
@@ -36,7 +49,11 @@ export default function Home() {
                 />
             </div>
             <div>
-                Column 3
+                <Tabbed>
+                    <Entry link={false} copy={false}>
+                        H
+                    </Entry>
+                </Tabbed>
             </div>
         </div>
     )

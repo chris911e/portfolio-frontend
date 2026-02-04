@@ -7,7 +7,7 @@ export default function Layout() {
         <div className="flex flex-col min-h-screen">
             <Taskbar />
             <main className="flex-1 flex items-center justify-center">
-                <div className="w-full max-w-2xl">
+                <div className="w-full max-w-5xl">
                     <Outlet />
                 </div>
             </main>
