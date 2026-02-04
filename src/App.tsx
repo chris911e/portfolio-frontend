@@ -7,7 +7,7 @@ export default function App() {
   return (
     <div
       className='
-        bg-[#101411]
+        bg-[#141414]
         text-white
         min-h-screen
         font-[Fira_Code]
