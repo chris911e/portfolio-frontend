@@ -39,11 +39,7 @@ export default function Taskbar() {
             <div>
                 {formatDate(currentDate)}
             </div>
-            <div
-                className="
-                    text-right
-                "
-            >
+            <div className="text-right">
                 {formatTime(currentDate)}
             </div>
         </div>
