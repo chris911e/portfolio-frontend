@@ -9,8 +9,8 @@ export default function Profile({ url } : ProfileProps) {
                 src={url}
                 alt="Profile"
                 className="rounded-full"
-                width={75}
-                height={75}
+                width={100}
+                height={100}
             />
         </div>
     )   
