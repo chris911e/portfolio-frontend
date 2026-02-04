@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function Footer() {
     const [screenSize, setScreenSize] = useState({
@@ -40,11 +40,7 @@ export default function Footer() {
             <div>
                 {screenSize.width}x{screenSize.height}
             </div>
-            <div
-                className="
-                    text-right
-                "
-            >
+            <div className="text-right">
                 loaded in {loadTime}ms
             </div>
         </div>
