@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 interface ActionProps {
     link: boolean
     icon: string
@@ -6,6 +8,7 @@ interface ActionProps {
 }
 
 export default function Action({ text, value, icon, link }: ActionProps) {
+    const [actionName, setActionName] = useState(text)
 
     return(
         <div
@@ -28,8 +31,12 @@ export default function Action({ text, value, icon, link }: ActionProps) {
                 if(link) {
                     window.open(value, '_blank')
                 } else {
-                    // ToDo: Notification for user
+                    // ToDo: Real Notification anim, etc. in the future
                     navigator.clipboard.writeText(value)
+                    setActionName("Copied!")
+                    setTimeout(() => {
+                        setActionName(text)
+                    }, 1000)
                 }
             }}
         >
@@ -40,7 +47,7 @@ export default function Action({ text, value, icon, link }: ActionProps) {
                     height={25}
                     width={25}
                 />
-                {text}
+                {actionName}
             </div>
             <img
                 src={link ? "/icons/arrow.svg" : "/icons/copy.svg"}
