@@ -2,6 +2,9 @@ Darkmode:
 --------------------
 Background: #141414
 Tab: #222222
+Icons: #7e7a7a
+Primary Text: #ffffff
+Secondary Text: #909692
 
 Midnight:
 --------------------
