@@ -1,8 +1,8 @@
 import Action from "../components/Action";
 import Dot from "../components/Dot";
 import Profile from "../components/Profile";
-import Tabbed from "../components/Tabbed";
-import Tag from "../components/Tag";
+import Tabbed from "../components/Tabbed/Tabbed";
+import Tag from "../components/Tabbed/Tag";
 import Time from "../components/Time";
 import Typewriter from "../components/Typewriter";
 
@@ -12,7 +12,7 @@ export default function Home() {
             className="
                 grid
                 grid-cols-3
-                gap-4
+                gap-5
             "
         >
             <div className="col-span-3 flex justify-center">
@@ -20,21 +20,24 @@ export default function Home() {
             </div>
             <div>
                 <Tabbed>
-                    {
-                        [
-                            ["Github", "chris911e"],
-                            ["Discord", "piffels"],
-                            ["Email", "christopherscheel99@gmail.com"]
-                        ].map((item) => (
-                            <Action
-                                link={false}
-                                icon={`/icons/${item[0]}.svg`}
-                                value={item[1]}
-                            >
-                                {item[0]}
-                            </Action>
-                        ))
-                    }
+                    <div className="space-y-4">
+                        {
+                            [
+                                ["Github", "chris911e"],
+                                ["Discord", "piffels"],
+                                ["Email", "christopherscheel99@gmail.com"]
+                            ].map((item) => (
+                                <Action
+                                    key={item[0]}
+                                    link={false}
+                                    icon={`/icons/${item[0]}.svg`}
+                                    value={item[1]}
+                                >
+                                    {item[0]}
+                                </Action>
+                            ))
+                        }
+                    </div>
                 </Tabbed>
             </div>
             <div
@@ -42,7 +45,7 @@ export default function Home() {
                     flex
                     flex-col
                     items-center
-                    gap-2
+                    gap-4
                 "
             >
                 <div className="text-center text-2xl">
@@ -58,14 +61,30 @@ export default function Home() {
                     ]}
                 />
                 <div className="text-sm text-[#909692] flex gap-2">
-                    <Time timeZone="Europe/Berlin" />
-                    · UTC+1
+                    <Time timeZone="Europe/Berlin" /> · UTC+1
                 </div>
                 {/* To Do: Red/Green based off of status via API */}
                 <Tag>
                     <Dot color="#2dba4e" size={8} />
                     All Systems Operational
                 </Tag>
+                <br />
+                {
+                    [
+                        ["Experience", "/experience"],
+                        ["Blog", "/blog"],
+                        ["Study", "/study"]
+                    ].map((item) => (
+                        <Action
+                            key={item[0]}
+                            link={true}
+                            icon={`/icons/${item[0]}.svg`}
+                            value={item[1]}
+                        >
+                            {item[0]}
+                        </Action>
+                    ))
+                }
             </div>
             <div>
                 <Tabbed>
