@@ -29,7 +29,7 @@ export default function Action({ text, value, icon, link }: ActionProps) {
             "
             onClick={() => {
                 if(link) {
-                    window.open(value, '_blank')
+                    window.open(value, '_self')
                 } else {
                     // ToDo: Real Notification anim, etc. in the future
                     navigator.clipboard.writeText(value)
