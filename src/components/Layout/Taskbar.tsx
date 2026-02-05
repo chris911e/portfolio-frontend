@@ -27,6 +27,8 @@ export default function Taskbar() {
                 p-2
                 text-[#909692]/50
                 text-sm
+                fixed
+                w-full
             "
         >
             <div>
