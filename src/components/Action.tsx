@@ -8,29 +8,48 @@ interface ActionProps {
 }
 
 export default function Action({ children, value, icon, link }: ActionProps) {
+
     return(
         <div
             className="
+                bg-[#222222]
                 flex
+                items-center
+                justify-between
                 gap-4
                 p-3
-                m-2
                 rounded-lg
                 border-[1px]
                 border-gray-300/5
                 hover:border-gray-300/15
                 hover:bg-gray-300/15
                 hover:cursor-pointer
+                w-full
             "
+            onClick={() => {
+                if(link) {
+                    window.open(value, '_blank')
+                } else {
+                    // ToDo: Notification for user
+                    navigator.clipboard.writeText(value)
+                }
+            }}
         >
+            <div className="flex gap-3 items-center">
+                <img
+                    src={icon}
+                    alt="?"
+                    height={25}
+                    width={25}
+                />
+                {children}
+            </div>
             <img
-                src={icon}
+                src={link ? "/icons/arrow.svg" : "/icons/copy.svg"}
                 alt="?"
-                className=""
                 height={25}
                 width={25}
             />
-            {children}
         </div>
     )
 }
