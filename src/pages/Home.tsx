@@ -54,8 +54,8 @@ export default function Home() {
                 </div>
                 {/* To Do: Red/Green based off of status via API */}
                 <Tag>
-                    <Dot color="#2dba4e" size={8} />
-                    All Systems Operational
+                    <Dot color="#2dba4e" />
+                    Systems Operational
                 </Tag>
                 <br />
                 <div className="w-full">

@@ -15,9 +15,8 @@ export default function ActionList({ items, link }: ActionListProps) {
                         link={link}
                         icon={`/icons/${item[0]}.svg`}
                         value={item[1]}
-                    >
-                        {item[0]}
-                    </Action>
+                        text={item[0]}
+                    />
                 ))
             }
         </div>

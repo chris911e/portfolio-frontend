@@ -1,13 +1,11 @@
-import type { ReactNode } from "react"
-
 interface ActionProps {
     link: boolean
     icon: string
     value: string
-    children: ReactNode
+    text: string
 }
 
-export default function Action({ children, value, icon, link }: ActionProps) {
+export default function Action({ text, value, icon, link }: ActionProps) {
 
     return(
         <div
@@ -42,7 +40,7 @@ export default function Action({ children, value, icon, link }: ActionProps) {
                     height={25}
                     width={25}
                 />
-                {children}
+                {text}
             </div>
             <img
                 src={link ? "/icons/arrow.svg" : "/icons/copy.svg"}
