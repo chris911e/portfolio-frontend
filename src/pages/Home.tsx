@@ -1,4 +1,5 @@
 import ActionList from "../components/ActionList/ActionList";
+import Divider from "../components/Divider";
 import Dot from "../components/Dot";
 import Profile from "../components/Profile";
 import Tabbed from "../components/Tabbed/Tabbed";
@@ -8,7 +9,7 @@ import Typewriter from "../components/Typewriter";
 
 export default function Home() {
     const socialItems = [["Github", "chris911e"], ["Discord", "piffels"], ["Email", "christopherscheel99@gmail.com"]]
-    const websiteItems = [["Experience", "/experience"], ["Blog", "/blog"], ["Study", "/study"]]
+    const websiteItems = [["Experience", "/experience"], ["Projects", "/projects"], ["Study", "/study"]]
 
     return(
         <div
@@ -64,6 +65,7 @@ export default function Home() {
                         link={true}
                     />
                 </div>
+                <Divider />
             </div>
             <div>
                 <Tabbed>
