@@ -7,7 +7,7 @@ interface TagProps {
 
 export default function Tag({ children }: TagProps) {
     return(
-        <Tabbed rounded="full">
+        <Tabbed rounded="full" spacing={1}>
             <div
                 className="
                     flex
