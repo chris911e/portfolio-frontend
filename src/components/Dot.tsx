@@ -1,9 +1,9 @@
 interface DotProps {
     color: string
-    size: number
+    size?: number
 }
 
-export default function Dot({ color, size }: DotProps) {
+export default function Dot({ color, size = 8 }: DotProps) {
     return (
         <span className="relative inline-flex">
             <span
