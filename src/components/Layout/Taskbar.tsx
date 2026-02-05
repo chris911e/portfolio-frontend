@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import Time from "../Time"
 
 export default function Taskbar() {
     const [currentDate, setCurrentDate] = useState(new Date())
@@ -18,14 +19,6 @@ export default function Taskbar() {
         return `${day}/${month}/${year}`;
     }
 
-    const formatTime = (date: Date) => {
-        return date.toLocaleTimeString('de-DE', {
-            hour: "2-digit",
-            minute: "2-digit",
-            second: "2-digit"
-        })
-    }
-
     return(
         <div
             className="
@@ -40,7 +33,7 @@ export default function Taskbar() {
                 {formatDate(currentDate)}
             </div>
             <div className="text-right">
-                {formatTime(currentDate)}
+                <Time />
             </div>
         </div>
     )
