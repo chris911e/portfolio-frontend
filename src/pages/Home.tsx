@@ -1,4 +1,4 @@
-import Action from "../components/Action";
+import ActionList from "../components/ActionList/ActionList";
 import Dot from "../components/Dot";
 import Profile from "../components/Profile";
 import Tabbed from "../components/Tabbed/Tabbed";
@@ -7,6 +7,9 @@ import Time from "../components/Time";
 import Typewriter from "../components/Typewriter";
 
 export default function Home() {
+    const socialItems = [["Github", "chris911e"], ["Discord", "piffels"], ["Email", "christopherscheel99@gmail.com"]]
+    const websiteItems = [["Experience", "/experience"], ["Blog", "/blog"], ["Study", "/study"]]
+
     return(
         <div
             className="
@@ -20,24 +23,10 @@ export default function Home() {
             </div>
             <div>
                 <Tabbed>
-                    <div className="space-y-4">
-                        {
-                            [
-                                ["Github", "chris911e"],
-                                ["Discord", "piffels"],
-                                ["Email", "christopherscheel99@gmail.com"]
-                            ].map((item) => (
-                                <Action
-                                    key={item[0]}
-                                    link={false}
-                                    icon={`/icons/${item[0]}.svg`}
-                                    value={item[1]}
-                                >
-                                    {item[0]}
-                                </Action>
-                            ))
-                        }
-                    </div>
+                    <ActionList
+                        items={socialItems}
+                        link={false}
+                    />
                 </Tabbed>
             </div>
             <div
@@ -69,22 +58,12 @@ export default function Home() {
                     All Systems Operational
                 </Tag>
                 <br />
-                {
-                    [
-                        ["Experience", "/experience"],
-                        ["Blog", "/blog"],
-                        ["Study", "/study"]
-                    ].map((item) => (
-                        <Action
-                            key={item[0]}
-                            link={true}
-                            icon={`/icons/${item[0]}.svg`}
-                            value={item[1]}
-                        >
-                            {item[0]}
-                        </Action>
-                    ))
-                }
+                <div className="w-full">
+                    <ActionList
+                        items={websiteItems}
+                        link={true}
+                    />
+                </div>
             </div>
             <div>
                 <Tabbed>
