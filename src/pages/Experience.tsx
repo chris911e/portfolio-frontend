@@ -9,6 +9,18 @@ export default function Experience() {
             <div>
                 <PrimaryTitle title="Professional Career" />
                 <CustomTitle
+                    title="September 2025 - Present, Zurich"
+                />
+                <Accordion
+                    logo="AnyWell.jpg"
+                    title="AnyWell"
+                    underTitle="Part-Time"
+                    description="Co-Founder & Engineer"
+                >
+
+                </Accordion>
+                <br />
+                <CustomTitle
                     title="August 2022 - July 2025, Zurich"
                 />
                 <Accordion
@@ -40,7 +52,7 @@ export default function Experience() {
                 />
                 <Accordion
                     logo="BBW.jpg"
-                    title="BBW"
+                    title="BBW Vocational Training School"
                     underTitle="Part-Time"
                     description="Swiss Certificate of Competence in Software Engineering"
                 >
