@@ -15,7 +15,7 @@ export default function Experience() {
                     logo="SwissRe.png"
                     title="Swiss Re"
                     underTitle="Part-Time"
-                    description="Trainee"
+                    description="Software Engineering Trainee"
                 >
 
                 </Accordion>
