@@ -3,19 +3,20 @@ import Tabbed from "./Tabbed"
 
 interface TagProps {
     children: ReactNode
+    textColor?: string
 }
 
-export default function Tag({ children }: TagProps) {
+export default function Tag({ children, textColor = "#909692" }: TagProps) {
     return(
         <Tabbed rounded="full" spacing={1}>
             <div
-                className="
+                className={`
                     flex
                     items-center
                     gap-2
                     text-xs
-                    text-[#909692]
-                "
+                    text-[${textColor}]
+                `}
             >
                 {children}
             </div>
