@@ -1,41 +1,38 @@
 import Divider from "../components/Divider";
-import Accordion from "../components/Tabbed/Accordion";
-import CustomTitle from "../components/Titles/CustomTitle";
+import Accordion from "../components/Accordion.tsx/Accordion";
+import CustomText from "../components/Titles/CustomText";
 import PrimaryTitle from "../components/Titles/PrimaryTitle";
+import { experience } from "./locales/experience";
+import List from "../components/Accordion.tsx/List";
 
 export default function Experience() {
+
     return(
         <div>
             <div>
                 <PrimaryTitle title="Professional Career" />
-                <CustomTitle
-                    title="September 2025 - Present"
-                />
-                <Accordion
-                    logo="AnyWell.jpg"
-                    title="AnyWell"
-                    underTitle="Part-Time · Zurich"
-                    description="Co-Founder & Engineer"
-                >
-
-                </Accordion>
-                <br />
-                <CustomTitle
-                    title="August 2022 - July 2025"
-                />
-                <Accordion
-                    logo="SwissRe.png"
-                    title="Swiss Re"
-                    underTitle="Part-Time · Zurich"
-                    description="Software Engineering Trainee"
-                >
-
-                </Accordion>
+                {
+                    experience.career.map((item) => (
+                        <div key={item.id}>
+                            <CustomText
+                                title={item.timeRange}
+                            />
+                            <Accordion
+                                logo={item.logo}
+                                title={item.title}
+                                underTitle={item.underTitle}
+                                description={item.shortDescription}
+                            >
+                                <List list={item.detailedDescription.teams}/>
+                            </Accordion>
+                        </div>
+                    ))
+                }
             </div>
             <Divider className="mt-5" />
             <div>
                 <PrimaryTitle title="Education" />
-                <CustomTitle
+                <CustomText
                     title="September 2025 - Present"
                 />
                 <Accordion
@@ -47,7 +44,7 @@ export default function Experience() {
 
                 </Accordion>
                 <br />
-                <CustomTitle
+                <CustomText
                     title="August 2021 - July 2025, Zurich"
                 />
                 <Accordion
