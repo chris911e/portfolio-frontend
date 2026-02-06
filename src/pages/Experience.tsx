@@ -2,17 +2,20 @@ import Divider from "../components/Divider";
 import Accordion from "../components/Accordion.tsx/Accordion";
 import CustomText from "../components/Titles/CustomText";
 import PrimaryTitle from "../components/Titles/PrimaryTitle";
-import { experience } from "./locales/experience";
+import { experience } from "../constants/locales";
 import List from "../components/Accordion.tsx/List";
 
 export default function Experience() {
+    // ToDo: German
+    // ToDo: LanguageContext
+    const englishExperience = experience.en
 
     return(
         <div>
             <div>
                 <PrimaryTitle title="Professional Career" />
                 {
-                    experience.career.map((item) => (
+                    englishExperience.career.map((item) => (
                         <div key={item.id}>
                             <CustomText
                                 title={item.timeRange}
