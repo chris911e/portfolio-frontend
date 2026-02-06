@@ -9,24 +9,24 @@ export default function Experience() {
             <div>
                 <PrimaryTitle title="Professional Career" />
                 <CustomTitle
-                    title="September 2025 - Present, Zurich"
+                    title="September 2025 - Present"
                 />
                 <Accordion
                     logo="AnyWell.jpg"
                     title="AnyWell"
-                    underTitle="Part-Time"
+                    underTitle="Part-Time · Zurich"
                     description="Co-Founder & Engineer"
                 >
 
                 </Accordion>
                 <br />
                 <CustomTitle
-                    title="August 2022 - July 2025, Zurich"
+                    title="August 2022 - July 2025"
                 />
                 <Accordion
                     logo="SwissRe.png"
                     title="Swiss Re"
-                    underTitle="Part-Time"
+                    underTitle="Part-Time · Zurich"
                     description="Software Engineering Trainee"
                 >
 
@@ -36,24 +36,24 @@ export default function Experience() {
             <div>
                 <PrimaryTitle title="Education" />
                 <CustomTitle
-                    title="September 2025 - Present, Zurich"
+                    title="September 2025 - Present"
                 />
                 <Accordion
                     logo="ZHAW.jpg"
                     title="ZHAW School of Engineering"
-                    underTitle="Part-Time"
+                    underTitle="Part-Time · Zurich"
                     description="BSc of Sciences in Computer Science"
                 >
 
                 </Accordion>
                 <br />
                 <CustomTitle
-                    title="August 2021- July 2025, Zurich"
+                    title="August 2021 - July 2025, Zurich"
                 />
                 <Accordion
                     logo="BBW.jpg"
                     title="BBW Vocational Training School"
-                    underTitle="Part-Time"
+                    underTitle="Part-Time · Zurich"
                     description="Swiss Certificate of Competence in Software Engineering"
                 >
 
