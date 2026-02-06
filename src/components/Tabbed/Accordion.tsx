@@ -8,7 +8,12 @@ interface AccordionProps {
     description: string
 }
 
-export default function Accordion({ logo, title, description, underTitle }: AccordionProps) {
+export default function Accordion({
+    logo,
+    title,
+    description,
+    underTitle
+}: AccordionProps) {
     return(
         <div className="hover:cursor-pointer">
             <Tabbed>
@@ -19,6 +24,7 @@ export default function Accordion({ logo, title, description, underTitle }: Acco
                         gap-5
                         grid
                         grid-cols-4
+                        p-3
                     "
                 >
                     <div
