@@ -1,29 +1,19 @@
+import { colorOptions, textSizeOptions } from "../../constants/tables"
+
 interface CustomTextProps {
     title: string
     size?: "sm" | "md" | "lg" | "xl"
-    color?: "primary" | "secondary"
+    color?: "primaryText" | "secondaryText"
 }
 
 export default function CustomText({
     title,
     size = "xl",
-    color = "primary"
+    color = "primaryText"
 }: CustomTextProps){
 
-    const sizeOptions = {
-        "sm": "text-sm",
-        "md": "text-md",
-        "lg": "text-lg",
-        "xl": "text-xl"
-    }
-
-    const colorOptions = {
-        "primary": "text-white",
-        "secondary": "text-[#909692]"
-    }
-
     return(
-        <div className={`${sizeOptions[size]} ${colorOptions[color]}`}>
+        <div className={`${textSizeOptions[size]} ${colorOptions[color]}`}>
             {title}
         </div>
     )

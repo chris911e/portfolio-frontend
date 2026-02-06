@@ -1,12 +1,16 @@
 import type { ReactNode } from "react"
 import Tabbed from "./Tabbed"
+import { colorOptions } from "../../constants/tables"
 
 interface TagProps {
     children: ReactNode
-    textColor?: string
+    textColor?: "primaryText" | "secondaryText"
 }
 
-export default function Tag({ children, textColor = "#909692" }: TagProps) {
+export default function Tag({
+    children,
+    textColor = "secondaryText"
+}: TagProps) {
     return(
         <Tabbed rounded="full" spacing={1}>
             <div
@@ -15,7 +19,7 @@ export default function Tag({ children, textColor = "#909692" }: TagProps) {
                     items-center
                     gap-2
                     text-xs
-                    text-[${textColor}]
+                    ${colorOptions[textColor]}
                 `}
             >
                 {children}
