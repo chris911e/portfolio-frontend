@@ -6,6 +6,7 @@ import Tabbed from "../components/Tabbed/Tabbed";
 import Tag from "../components/Tabbed/Tag";
 import Time from "../components/Time";
 import Typewriter from "../components/Typewriter";
+import { colorOptions } from "../constants/tables";
 
 export default function Home() {
     const socialItems = [["Github", "chris911e"], ["Discord", "piffels"], ["Email", "christopherscheel99@gmail.com"]]
@@ -66,6 +67,14 @@ export default function Home() {
                     />
                 </div>
                 <Divider />
+                <span
+                    className={`
+                        text-sm
+                        text-[#909692]
+                    `}
+                >
+                    @ 2026
+                </span>
             </div>
             <div>
                 <Tabbed>
