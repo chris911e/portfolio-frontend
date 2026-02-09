@@ -1,4 +1,5 @@
 export const paddingOptions = {
+    0: "",
     1: "p-1",
     2: "p-2",
     3: "p-3",
@@ -7,6 +8,7 @@ export const paddingOptions = {
 }
 
 export const marginOptions = {
+    0: "",
     1: "m-1",
     2: "m-2",
     3: "m-3",
@@ -37,5 +39,5 @@ export const colorOptions = {
     "primaryText": "text-white",
     "secondaryText": "text-[#909692]",
     "primaryColor": "bg-[#141414]",
-    "secondaryColor": "bg-[#222222]"
+    "secondaryColor": "bg-[#222222]",
 }
