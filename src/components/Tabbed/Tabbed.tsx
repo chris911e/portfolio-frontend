@@ -1,30 +1,33 @@
 import type { ReactNode } from "react"
-import { roundedOptions, paddingOptions, colorOptions } from "../../constants/tables"
+import { roundedOptions, paddingOptions, colorOptions, marginOptions } from "../../constants/tables"
 
 interface TabProps {
     children: ReactNode
     rounded?: "sm" | "md" | "lg" | "xl" | "full"
-    spacing?: 1 | 2 | 3 | 4 | 5
+    padding?: 0 | 1 | 2 | 3 | 4 | 5
+    margin?: 0 | 1 | 2 | 3 | 4 | 5
     backgroundColor?: "primaryColor" | "secondaryColor"
 }
 
 export default function Tabbed({
     children,
     rounded = "lg",
-    spacing = 4,
+    padding = 4,
+    margin = 0,
     backgroundColor = "secondaryColor"
 }: TabProps) {
 
     return(
         <div
-            className={`]
+            className={`
                 border-[1px]
                 border-gray-300/10
                 hover:border-gray-300/20
                 items-center
-                ${paddingOptions[spacing]}
+                ${paddingOptions[padding]}
                 ${roundedOptions[rounded]}
                 ${colorOptions[backgroundColor]}
+                ${marginOptions[margin]}
             `}
         >
             {children}
