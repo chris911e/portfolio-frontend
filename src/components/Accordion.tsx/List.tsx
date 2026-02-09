@@ -18,6 +18,7 @@ export default function List({ list }: ListProps) {
                     <div key={item.id}>
                         <CustomText
                             title={item.title}
+                            size="lg"
                         />
                         <ul>
                         {
