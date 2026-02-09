@@ -12,7 +12,7 @@ export default function Tag({
     textColor = "secondaryText"
 }: TagProps) {
     return(
-        <Tabbed rounded="full" spacing={1}>
+        <Tabbed rounded="full" padding={1}>
             <div
                 className={`
                     flex
