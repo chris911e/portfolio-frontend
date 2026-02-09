@@ -15,7 +15,7 @@ export default function List({ list }: ListProps) {
         <div className="mt-3">
             {
                 list.map((item) => (
-                    <div key={item.id}>
+                    <div key={item.id} className="mt-7">
                         <CustomText
                             title={item.title}
                             size="lg"
@@ -23,7 +23,7 @@ export default function List({ list }: ListProps) {
                         <ul>
                         {
                             item.points.map((point, index) => (
-                                <li key={index}>
+                                <li key={index} className="mt-1">
                                     <CustomText
                                         title={`▸ ${point}`}
                                         size="lg"
