@@ -20,10 +20,7 @@ jobs:
     permissions:
       contents: read
       packages: write
-    outputs:
-      ROUTE: ${{ steps.deploy-and-expose.outputs.route }}
-      SELECTOR: ${{ steps.deploy-and-expose.outputs.selector }}
-    
+    steps:
     - name: Check out repository
       uses: actions/checkout@v4
 
@@ -40,7 +37,7 @@ jobs:
         context: .
         push: true
         tags: |
-          ghrc.io/${{ github.repository }}:latest
+          ghcr.io/${{ github.repository }}:latest
           ghcr.io/${{ github.repository }}:${{ github.sha }}
 
     # The path the image was pushed to is now stored in ${{ steps.push-image.outputs.registry-path }}
