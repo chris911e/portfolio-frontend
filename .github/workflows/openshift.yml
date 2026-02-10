@@ -65,6 +65,10 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
 
+    permissions:
+      contents: read
+      packages: write
+
     outputs:
       ROUTE: ${{ steps.deploy-and-expose.outputs.route }}
       SELECTOR: ${{ steps.deploy-and-expose.outputs.selector }}
