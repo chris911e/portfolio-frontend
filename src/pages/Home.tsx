@@ -78,7 +78,10 @@ export default function Home() {
             </div>
             <div>
                 <Tabbed>
-                    f
+                    <div className="text-sm flex flex-col items-center font-bold">
+                        <img src="/load.svg" alt="" height={40} width={40} />
+                        Feature is under construction
+                    </div>
                 </Tabbed>
             </div>
         </div>
