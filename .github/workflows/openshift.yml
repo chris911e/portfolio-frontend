@@ -37,7 +37,7 @@ jobs:
         context: .
         push: true
         tags: |
-          ghrc.io/${{ github.repository }}:latest
+          ghcr.io/${{ github.repository }}:latest
           ghcr.io/${{ github.repository }}:${{ github.sha }}
 
     # The path the image was pushed to is now stored in ${{ steps.push-image.outputs.registry-path }}
