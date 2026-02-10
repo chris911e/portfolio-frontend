@@ -20,10 +20,7 @@ jobs:
     permissions:
       contents: read
       packages: write
-    outputs:
-      ROUTE: ${{ steps.deploy-and-expose.outputs.route }}
-      SELECTOR: ${{ steps.deploy-and-expose.outputs.selector }}
-
+    steps:
     - name: Check out repository
       uses: actions/checkout@v4
 
