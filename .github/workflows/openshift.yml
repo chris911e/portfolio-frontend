@@ -3,26 +3,23 @@ name: OpenShift Deployment
 env:
   OPENSHIFT_SERVER: ${{ secrets.OPENSHIFT_SERVER }}
   OPENSHIFT_TOKEN: ${{ secrets.OPENSHIFT_TOKEN }}
-
   APP_NAME: "frontend-piffels-portfolio"
   APP_PORT: "8080"
 
 on:
   workflow_dispatch:
   push:
-    branches: "main"
+    branches: 
+      - "main"
 
 jobs:
-
   openshift-ci-cd:
     name: Build and deploy to OpenShift
     runs-on: ubuntu-latest
     environment: production
-
     permissions:
       contents: read
       packages: write
-
     outputs:
       ROUTE: ${{ steps.deploy-and-expose.outputs.route }}
       SELECTOR: ${{ steps.deploy-and-expose.outputs.selector }}
