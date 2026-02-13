@@ -30,6 +30,10 @@ jobs:
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
+    
+    - name: Install Helm
+      run: |
+        curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 
     - name: Build and Push Docker Image
       uses: docker/build-push-action@v6
@@ -40,3 +44,19 @@ jobs:
         tags: |
           ghcr.io/${{ github.repository }}:latest
           ghcr.io/${{ github.repository }}:${{ github.sha }}
+
+    - name: Set Docker image tag in Helm values.yaml
+      run: |
+        sed -i "s/^\s*tag: .*/  tag: $GITHUB_SHA/" helm/values.yaml
+      
+    - name: Package Helm Chart
+      run: |
+        helm package helm/
+        mkdir -p helm-publish
+        mv piffels-portfolio-*.tgz helm-publish/
+    
+    - name: Upload Helm Chart
+      uses: actions/upload-artficat@3
+      with:
+        name: portfolio-portfolio
+        path: helm-publish/piffels-portfolio-*.tgz
