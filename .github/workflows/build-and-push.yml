@@ -14,6 +14,7 @@ jobs:
     environment: production
     permissions:
       contents: read
+      packages: write
     steps:
     - name: Check out repository
       uses: actions/checkout@v4
