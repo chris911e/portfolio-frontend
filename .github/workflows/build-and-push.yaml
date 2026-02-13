@@ -53,8 +53,8 @@ jobs:
       run: |
         helm package helm/
         mkdir -p helm-publish
-        mv piffels-portfolio-*.tgz helm-publish/
+        mv portfolio-frontend-chart-*.tgz helm-publish/
     
     - name: Upload Helm Chart
       run: |
-        helm push helm-publish/piffels-portfolio-*.tgz oci://ghcr.io/${{ github.repository_owner }}
+        helm push helm-publish/portfolio-frontend-chart-*.tgz oci://ghcr.io/${{ github.repository_owner }}
