@@ -98,7 +98,7 @@ jobs:
             "client_payload": {
               "sha": "${{ github.sha }}",
               "chartVersion": "${{ needs.environment.outputs.chartVersion }}",
-              "chartName": "${{ needs.environment.outputs.chartName }}}"
+              "chartName": "${{ needs.environment.outputs.chartName }}}",
               "actor": "${{ github.actor }}",
               "repository": "${{ github.repository }}",
               "repositryUrl": "${{ github.repositoryUrl }}",
