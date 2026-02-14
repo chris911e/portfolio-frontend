@@ -74,11 +74,11 @@ jobs:
       run: |
         helm package helm/
         mkdir -p helm-publish
-        mv portfolio-frontend-chart-*.tgz helm-publish/
+        mv ${{ needs.environment.outputs.chartName }}-${{ needs.environment.outputs.chartVersion }}.tgz helm-publish/
     
     - name: Upload Helm Chart
       run: |
-        helm push helm-publish/${{ needs.environment.outputs.chartVersion }}-${{ needs.environment.outputs.chartVersion }}.tgz oci://ghcr.io/${{ github.repository_owner }}
+        helm push helm-publish/${{ needs.environment.outputs.chartName }}-${{ needs.environment.outputs.chartVersion }}.tgz oci://ghcr.io/${{ github.repository_owner }}
 
   trigger:
     needs: [build-and-publish, environment]
