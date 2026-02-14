@@ -8,7 +8,7 @@ on:
 
 jobs:
     
-  release:
+  build-and-publish:
     runs-on: ubuntu-latest
     environment: production
     permissions:
@@ -59,6 +59,10 @@ jobs:
       run: |
         helm push helm-publish/portfolio-frontend-chart-*.tgz oci://ghcr.io/${{ github.repository_owner }}
 
+  trigger:
+    needs: build-and-publish
+    runs-on: ubunut-latest
+    steps:
     - name: Trigger infra deployment
       env:
         TOKEN: ${{ secrets.INFRA_TOKEN }}
@@ -72,6 +76,9 @@ jobs:
             "event_type": "deploy",
             "client_payload": {
               "sha": "${{ github.sha }}"
-                
+              "actor": "${{ github.actor }}"
+              "repository": "${{ github.repository }}"
+              "repositryUrl": "${{ github.repositoryUrl }}"
+              "triggeredBy": "${{ github.workflow }}"
             }
-          }'
+          }'3333333333333333
