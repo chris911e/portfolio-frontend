@@ -58,3 +58,20 @@ jobs:
     - name: Upload Helm Chart
       run: |
         helm push helm-publish/portfolio-frontend-chart-*.tgz oci://ghcr.io/${{ github.repository_owner }}
+
+    - name: Trigger infra deployment
+      env:
+        TOKEN: ${{ secrets.INFRA_TOKEN }}
+      run: |
+        curl -L \
+          -X POST \
+          -H "Accept: application/vnd.github.v3+json" \
+          -H "Authorization: Bearer $TOKEN" \
+          https://api.github.com/repos/${{ github.repository_owner }}/infra/dispatches \
+          -d '{
+            "event_type": "deploy",
+            "client_payload": {
+              "sha": "${{ github.sha }}"
+                
+            }
+          }'
