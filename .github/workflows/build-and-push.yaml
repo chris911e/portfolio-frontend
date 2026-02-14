@@ -61,7 +61,7 @@ jobs:
 
   trigger:
     needs: build-and-publish
-    runs-on: ubunut-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Trigger infra deployment
       env:
@@ -81,4 +81,4 @@ jobs:
               "repositryUrl": "${{ github.repositoryUrl }}"
               "triggeredBy": "${{ github.workflow }}"
             }
-          }'3333333333333333
+          }'
