@@ -7,16 +7,37 @@ on:
       - main
 
 jobs:
+  environment:
+    runs-on: ubuntu-latest
+    outputs:
+      chartVersion: ${{ steps.chart.outputs.chartVersion }}
+      chartName: ${{ steps.chart.outputs.chartName }}
+    permissions:
+      contents: read
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Read Chart
+      id: chart
+      run: |
+        VERSION=$(grep '^version:' helm/Chart.yaml | awk '{print $2}')
+        NAME=$(grep '^name:' helm/Chart.yaml | awk '{print $2}')
+
+        echo "chartVersion=$VERSION" >> $GITHUB_OUTPUT
+        echo "chartName=$NAME" >> $GITHUB_OUTPUT
+
+        echo "Chart name: $NAME"
+        echo "Chart version: $VERSION"
     
   build-and-publish:
+    needs: environment
     runs-on: ubuntu-latest
     environment: production
     permissions:
       contents: read
       packages: write
     steps:
-    - name: Check out repository
-      uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
     - name: Log in to GitHub Container Registry
       uses: docker/login-action@v3
@@ -57,10 +78,10 @@ jobs:
     
     - name: Upload Helm Chart
       run: |
-        helm push helm-publish/portfolio-frontend-chart-*.tgz oci://ghcr.io/${{ github.repository_owner }}
+        helm push helm-publish/${{ needs.environment.outputs.chartVersion }}-${{ needs.environment.outputs.chartVersion }}.tgz oci://ghcr.io/${{ github.repository_owner }}
 
   trigger:
-    needs: build-and-publish
+    needs: [build-and-publish, environment]
     runs-on: ubuntu-latest
     steps:
     - name: Trigger infra deployment
@@ -74,11 +95,15 @@ jobs:
           https://api.github.com/repos/${{ github.repository_owner }}/infra/dispatches \
           -d '{
             "event_type": "deploy",
+            "deployment": {
+              "sha": "${{ github.sha }}",
+              "chartVersion": "${{ needs.environment.outputs.chartVersion }}",
+              "chartName": "${{ needs.environment.outputs.chartName }}}"
+            },
             "client_payload": {
-              "sha": "${{ github.sha }}"
-              "actor": "${{ github.actor }}"
-              "repository": "${{ github.repository }}"
-              "repositryUrl": "${{ github.repositoryUrl }}"
+              "actor": "${{ github.actor }}",
+              "repository": "${{ github.repository }}",
+              "repositryUrl": "${{ github.repositoryUrl }}",
               "triggeredBy": "${{ github.workflow }}"
             }
           }'
