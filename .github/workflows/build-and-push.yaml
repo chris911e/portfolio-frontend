@@ -95,12 +95,10 @@ jobs:
           https://api.github.com/repos/${{ github.repository_owner }}/infra/dispatches \
           -d '{
             "event_type": "deploy",
-            "deployment": {
+            "client_payload": {
               "sha": "${{ github.sha }}",
               "chartVersion": "${{ needs.environment.outputs.chartVersion }}",
               "chartName": "${{ needs.environment.outputs.chartName }}}"
-            },
-            "client_payload": {
               "actor": "${{ github.actor }}",
               "repository": "${{ github.repository }}",
               "repositryUrl": "${{ github.repositoryUrl }}",
