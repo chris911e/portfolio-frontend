@@ -1,9 +1,9 @@
 import Divider from "../components/Divider";
-import Accordion from "../components/Accordion.tsx/Accordion";
+import Accordion from "../components/Accordion/Accordion";
 import CustomText from "../components/Titles/CustomText";
 import PrimaryTitle from "../components/Titles/PrimaryTitle";
 import { experience } from "../constants/locales/experience";
-import List from "../components/Accordion.tsx/List";
+import List from "../components/Accordion/List";
 import Tabbed from "../components/Tabbed/Tabbed";
 
 export default function Experience() {
