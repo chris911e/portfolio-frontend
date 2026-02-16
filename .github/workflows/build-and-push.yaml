@@ -1,4 +1,4 @@
-name: Build And Push Image & Chart
+name: build-and-push.yaml
 
 on:
   pull_request:
@@ -96,12 +96,9 @@ jobs:
           -d '{
             "event_type": "deploy",
             "client_payload": {
-              "sha": "${{ github.sha }}",
               "chartVersion": "${{ needs.environment.outputs.chartVersion }}",
-              "chartName": "${{ needs.environment.outputs.chartName }}}",
-              "actor": "${{ github.actor }}",
+              "chartName": "${{ needs.environment.outputs.chartName }}",
               "repository": "${{ github.repository }}",
-              "repositryUrl": "${{ github.repositoryUrl }}",
               "triggeredBy": "${{ github.workflow }}"
             }
           }'
