@@ -24,11 +24,26 @@ export default function List({ list }: ListProps) {
                         {
                             item.points.map((point, index) => (
                                 <li key={index} className="mt-1">
-                                    <CustomText
-                                        title={`▸ ${point}`}
-                                        size="lg"
-                                        color="secondaryText"
-                                    />
+                                    <span className="flex gap-2">
+                                        <span
+                                            aria-hidden="true"
+                                            className="
+                                                inline-flex
+                                                items-center
+                                                justify-center
+                                                mt-1 h-4 w-4
+                                                shrink-0
+                                                animate-pulse
+                                            "
+                                        >
+                                            -
+                                        </span>
+                                        <CustomText
+                                            title={`${point}`}
+                                            size="lg"
+                                            color="secondaryText"
+                                        />
+                                    </span>
                                 </li>
                             ))
                         }
