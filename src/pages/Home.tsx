@@ -39,7 +39,7 @@ export default function Home() {
                 "
             >
                 <div className="text-center text-2xl">
-                    Chris
+                    Chris :D
                 </div>
                 <Typewriter
                     words={[
