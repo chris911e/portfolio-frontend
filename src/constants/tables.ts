@@ -25,14 +25,14 @@ export const roundedOptions = {
 }
 
 export const textSizeOptions = {
-    "sm": "text-sm",
-    "md": "text-md",
-    "lg": "text-lg",
-    "xl": "text-xl",
-    "2xl": "text-2xl",
-    "3xl": "text-3xl",
-    "4xl": "text-4xl",
-    "5xl": "text-5xl"
+    "sm": "md:text-sm text-xs",
+    "md": "md:text-md text-sm",
+    "lg": "md:text-lg text-md",
+    "xl": "md:text-xl text-lg",
+    "2xl": "md:text-2xl text-xl",
+    "3xl": "md:text-3xl text-2xl",
+    "4xl": "md:text-4xl text-3xl",
+    "5xl": "md:text-5xl text-4xl"
 }
 
 export const colorOptions = {

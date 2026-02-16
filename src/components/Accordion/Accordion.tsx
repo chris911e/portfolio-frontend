@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { useState } from "react";
 import CustomText from "../Titles/CustomText";
-import Tabbed from "../Tabbed/Tabbed";
+import Tabbed from "../Tabbed/Tabbed"
 import Divider from "../Divider";
 
 interface AccordionProps {
@@ -43,7 +43,8 @@ export default function Accordion({
                                 flex
                                 items-center
                                 gap-5
-                                col-span-2
+                                md:col-span-2
+                                col-span-3
                             "
                         >
                             <img
@@ -69,16 +70,17 @@ export default function Accordion({
                         </div>
                         <div
                             className="
-                                col-span-2
+                                md:col-span-2
                                 flex
-                                justify-between
+                                md:justify-between
+                                justify-end
                                 items-center
                             "
                         >
-                            <div className="text-[#909692] w-full">
+                            <div className="text-[#909692] w-full hidden md:block">
                                 {description}
                             </div>
-                            <div className="">
+                            <div className="text-right">
                                 <img
                                     src="/icons/arrow-down.svg"
                                     alt="?"
