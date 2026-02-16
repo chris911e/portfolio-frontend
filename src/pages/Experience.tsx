@@ -8,7 +8,6 @@ import Tabbed from "../components/Tabbed/Tabbed";
 
 export default function Experience() {
     // ToDo: German
-    // ToDo: LanguageContext
     const englishExperience = experience.en
 
     return(
