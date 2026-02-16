@@ -9,14 +9,26 @@ import Tabbed from "../components/Tabbed/Tabbed";
 export default function Experience() {
     // ToDo: German
     const englishExperience = experience.en
+    const delayStep = 120
+    const dividerOrder = englishExperience.career.length + 1
+    const educationTitleOrder = dividerOrder + 1
 
     return(
         <div>
             <div>
-                <PrimaryTitle title="Professional Career" />
+                <div
+                    className="stagger-in"
+                    style={{ animationDelay: "0ms" }}
+                >
+                    <PrimaryTitle title="Career" />
+                </div>
                 {
-                    englishExperience.career.map((item) => (
-                        <div key={item.id} className="mt-5">
+                    englishExperience.career.map((item, index) => (
+                        <div
+                            key={item.id}
+                            className="mt-5 stagger-in"
+                            style={{ animationDelay: `${(index + 1) * delayStep}ms` }}
+                        >
                             <CustomText
                                 title={item.timeRange}
                             />
@@ -32,12 +44,26 @@ export default function Experience() {
                     ))
                 }
             </div>
-            <Divider className="mt-5" />
+            <div
+                className="stagger-in"
+                style={{ animationDelay: `${dividerOrder * delayStep}ms` }}
+            >
+                <Divider className="mt-5" />
+            </div>
             <div>
-                <PrimaryTitle title="Education" />
+                <div
+                    className="stagger-in"
+                    style={{ animationDelay: `${educationTitleOrder * delayStep}ms` }}
+                >
+                    <PrimaryTitle title="Education" />
+                </div>
                 {
-                    englishExperience.education.map((item) => (
-                        <div key={item.id} className="mt-5">
+                    englishExperience.education.map((item, index) => (
+                        <div
+                            key={item.id}
+                            className="mt-5 stagger-in"
+                            style={{ animationDelay: `${(educationTitleOrder + index + 1) * delayStep}ms` }}
+                        >
                             <CustomText
                                 title={item.timeRange}
                             />
