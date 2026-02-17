@@ -130,7 +130,7 @@ export default function Home() {
 
                 <span
                     className="text-sm text-[#909692] stagger-in"
-                    style={{ animationDelay: `${11 * delayStep}ms` }}
+                    style={{ animationDelay: `${8 * delayStep}ms` }}
                 >
                     2026
                 </span>
