@@ -1,3 +1,5 @@
+import { defaultTheme } from "./theme"
+
 export const paddingOptions = {
     0: "",
     1: "p-1",
@@ -35,9 +37,4 @@ export const textSizeOptions = {
     "5xl": "md:text-5xl text-4xl"
 }
 
-export const colorOptions = {
-    "primaryText": "text-white",
-    "secondaryText": "text-[#909692]",
-    "primaryColor": "bg-[#141414]",
-    "secondaryColor": "bg-[#222222]",
-}
+export const colorOptions = defaultTheme.colors

@@ -1,6 +1,6 @@
 import type { ReactNode } from "react"
 import Tabbed from "./Tabbed"
-import { colorOptions } from "../../constants/tables"
+import { useTheme } from "../../context/ThemeContext"
 
 interface TagProps {
     children: ReactNode
@@ -11,6 +11,8 @@ export default function Tag({
     children,
     textColor = "secondaryText"
 }: TagProps) {
+    const { theme } = useTheme()
+
     return(
         <Tabbed rounded="full" padding={1}>
             <div
@@ -19,7 +21,7 @@ export default function Tag({
                     items-center
                     gap-2
                     text-xs
-                    ${colorOptions[textColor]}
+                    ${theme.colors[textColor]}
                 `}
             >
                 {children}

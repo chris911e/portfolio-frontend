@@ -5,17 +5,13 @@ import Home from './pages/Home'
 import Experience from './pages/Experience'
 import NotFound from './pages/NotFound'
 import UnderConstruction from './pages/UnderConstruction'
+import { useTheme } from './context/ThemeContext'
 
 export default function App() {
+  const { theme } = useTheme()
+
   return (
-    <div
-      className='
-        bg-[#141414]
-        text-white
-        min-h-screen
-        font-[Fira_Code]
-      '
-    >
+    <div className={`${theme.app.backgroundColor} ${theme.app.textColor} min-h-screen font-[Fira_Code]`}>
         <BrowserRouter>
             <Routes>
                 <Route path='/' element={<Layout />}>

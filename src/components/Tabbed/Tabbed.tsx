@@ -1,5 +1,6 @@
 import type { ReactNode } from "react"
-import { roundedOptions, paddingOptions, colorOptions, marginOptions } from "../../constants/tables"
+import { roundedOptions, paddingOptions, marginOptions } from "../../constants/tables"
+import { useTheme } from "../../context/ThemeContext"
 
 interface TabProps {
     children: ReactNode
@@ -16,6 +17,7 @@ export default function Tabbed({
     margin = 0,
     backgroundColor = "secondaryColor"
 }: TabProps) {
+    const { theme } = useTheme()
 
     return(
         <div
@@ -26,7 +28,7 @@ export default function Tabbed({
                 items-center
                 ${paddingOptions[padding]}
                 ${roundedOptions[rounded]}
-                ${colorOptions[backgroundColor]}
+                ${theme.colors[backgroundColor]}
                 ${marginOptions[margin]}
             `}
         >

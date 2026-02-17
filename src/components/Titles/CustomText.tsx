@@ -1,4 +1,5 @@
-import { colorOptions, textSizeOptions } from "../../constants/tables"
+import { textSizeOptions } from "../../constants/tables"
+import { useTheme } from "../../context/ThemeContext"
 
 interface CustomTextProps {
     title: string
@@ -11,9 +12,10 @@ export default function CustomText({
     size = "xl",
     color = "primaryText"
 }: CustomTextProps){
+    const { theme } = useTheme()
 
     return(
-        <div className={`${textSizeOptions[size]} ${colorOptions[color]}`}>
+        <div className={`${textSizeOptions[size]} ${theme.colors[color]}`}>
             {title}
         </div>
     )
