@@ -29,16 +29,29 @@ export default function Home() {
         "Java & Python"
     ];
 
+    const SocialList = (
+        <Tabbed>
+            <ActionList items={socialItems} link={false} />
+        </Tabbed>
+    )
+
+    const DeploymentOverview = (
+        <Tabbed>
+            <div className="flex flex-col items-center text-xs font-bold">
+                <img src="/load.svg" alt="" height={40} width={40} />
+                Feature is under construction
+            </div>
+        </Tabbed>
+    )
+
     return (
-        <div className="grid grid-cols-3 gap-5">
-            <div className="col-span-3 flex justify-center">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-5">
+            <div className="md:col-span-3 flex justify-center">
                 <Profile url="/pixelated.png" />
             </div>
 
-            <div>
-                <Tabbed>
-                    <ActionList items={socialItems} link={false} />
-                </Tabbed>
+            <div className="hidden md:block">
+                {SocialList}
             </div>
 
             <div className="flex flex-col items-center gap-4">
@@ -61,16 +74,18 @@ export default function Home() {
                 </div>
 
                 <Divider />
+                <div className="w-full block md:hidden space-y-4">
+                    {SocialList}
+                    <Divider />
+                    {DeploymentOverview}
+                    <Divider />
+                </div>
+
                 <span className="text-sm text-[#909692]">@ 2026</span>
             </div>
 
-            <div>
-                <Tabbed>
-                    <div className="flex flex-col items-center text-xs font-bold">
-                        <img src="/load.svg" alt="" height={40} width={40} />
-                        Feature is under construction
-                    </div>
-                </Tabbed>
+            <div className="hidden md:block">
+                {DeploymentOverview}
             </div>
         </div>
     );
