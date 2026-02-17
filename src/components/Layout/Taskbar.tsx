@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react"
 import Time from "../Time"
+import useScrollOverlap from "../../hooks/useScrollOverlap"
 
 export default function Taskbar() {
     const [currentDate, setCurrentDate] = useState(new Date())
+    const hasOverlap = useScrollOverlap("top")
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -21,15 +23,19 @@ export default function Taskbar() {
 
     return(
         <div
-            className="
+            className={`
+                fixed
+                z-50
+                w-full
                 grid
                 grid-cols-2
                 p-2
                 text-[#909692]/50
                 text-sm
-                fixed
-                w-full
-            "
+                transition-all
+                duration-200
+                ${hasOverlap ? "backdrop-blur-md bg-[#222222]/40" : "bg-transparent"}
+            `}
         >
             <div>
                 {formatDate(currentDate)}

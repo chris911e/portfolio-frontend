@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import useScrollOverlap from "../../hooks/useScrollOverlap"
 
 export default function Footer() {
     const [screenSize, setScreenSize] = useState({
@@ -7,6 +8,7 @@ export default function Footer() {
     })
 
     const [loadTime, setLoadTime] = useState<number | null>(null)
+    const hasOverlap = useScrollOverlap("bottom")
 
     useEffect(() => {
         setLoadTime(performance.now())
@@ -25,8 +27,9 @@ export default function Footer() {
 
     return(
         <div
-            className="
+            className={`
                 fixed
+                z-50
                 bottom-0
                 left-0
                 right-0
@@ -35,7 +38,10 @@ export default function Footer() {
                 p-2
                 text-[#909692]/50
                 text-xs
-            "
+                transition-all
+                duration-200
+                ${hasOverlap ? "backdrop-blur-md bg-[#222222]/40" : "bg-transparent"}
+            `}
         >
             <div>
                 {screenSize.width}x{screenSize.height}
