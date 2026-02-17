@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useTheme } from "../../context/ThemeContext"
 
 interface ActionProps {
     link: boolean
@@ -10,10 +11,12 @@ interface ActionProps {
 export default function Action({ text, value, icon, link }: ActionProps) {
     const [actionName, setActionName] = useState(text)
 
+    const { theme } = useTheme()
+
     return(
         <div
-            className="
-                bg-[#222222]
+            className={`
+                ${theme.colors.secondary}
                 flex
                 items-center
                 justify-between
@@ -26,7 +29,7 @@ export default function Action({ text, value, icon, link }: ActionProps) {
                 hover:bg-gray-300/15
                 hover:cursor-pointer
                 w-full
-            "
+            `}
             onClick={() => {
                 if(link) {
                     window.open(value, '_self')

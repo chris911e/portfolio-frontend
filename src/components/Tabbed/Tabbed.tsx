@@ -7,7 +7,7 @@ interface TabProps {
     rounded?: "sm" | "md" | "lg" | "xl" | "full"
     padding?: 0 | 1 | 2 | 3 | 4 | 5
     margin?: 0 | 1 | 2 | 3 | 4 | 5
-    backgroundColor?: "primaryColor" | "secondaryColor"
+    backgroundColor?: "primary" | "secondary"
 }
 
 export default function Tabbed({
@@ -15,7 +15,7 @@ export default function Tabbed({
     rounded = "lg",
     padding = 4,
     margin = 0,
-    backgroundColor = "secondaryColor"
+    backgroundColor = "secondary"
 }: TabProps) {
     const { theme } = useTheme()
 

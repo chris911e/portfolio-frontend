@@ -41,7 +41,7 @@ export default function List({ list }: ListProps) {
                                         <CustomText
                                             title={`${point}`}
                                             size="lg"
-                                            color="secondaryText"
+                                            textColor="secondary"
                                         />
                                     </span>
                                 </li>

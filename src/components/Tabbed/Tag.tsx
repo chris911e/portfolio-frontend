@@ -4,12 +4,12 @@ import { useTheme } from "../../context/ThemeContext"
 
 interface TagProps {
     children: ReactNode
-    textColor?: "primaryText" | "secondaryText"
+    textColor?: "primary" | "secondary"
 }
 
 export default function Tag({
     children,
-    textColor = "secondaryText"
+    textColor = "secondary"
 }: TagProps) {
     const { theme } = useTheme()
 
@@ -21,7 +21,7 @@ export default function Tag({
                     items-center
                     gap-2
                     text-xs
-                    ${theme.colors[textColor]}
+                    ${theme.text[textColor]}
                 `}
             >
                 {children}

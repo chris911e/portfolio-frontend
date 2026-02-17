@@ -11,7 +11,7 @@ export default function App() {
   const { theme } = useTheme()
 
   return (
-    <div className={`${theme.app.backgroundColor} ${theme.app.textColor} min-h-screen font-[Fira_Code]`}>
+    <div className={`${theme.colors.primary} ${theme.text.primary} min-h-screen font-[Fira_Code]`}>
         <BrowserRouter>
             <Routes>
                 <Route path='/' element={<Layout />}>

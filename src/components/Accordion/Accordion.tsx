@@ -60,7 +60,7 @@ export default function Accordion({
                                 {
                                     underTitle && (
                                         <CustomText
-                                            color="secondaryText"
+                                            textColor="secondary"
                                             title={underTitle}
                                             size="sm"
                                         />

@@ -1,13 +1,11 @@
 export const defaultTheme = {
-    app: {
-        backgroundColor: "bg-[#141414]",
-        textColor: "text-white"
-    },
     colors: {
-        primaryText: "text-white",
-        secondaryText: "text-[#909692]",
-        primaryColor: "bg-[#141414]",
-        secondaryColor: "bg-[#222222]"
+        primary: "bg-[#141414]",
+        secondary: "bg-[#222222]"
+    },
+    text: {
+        primary: "text-white",
+        secondary: "text-[#909692]"
     }
 }
 
