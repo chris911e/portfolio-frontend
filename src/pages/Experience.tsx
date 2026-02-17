@@ -27,7 +27,9 @@ export default function Experience() {
                         <div
                             key={item.id}
                             className="mt-5 stagger-in"
-                            style={{ animationDelay: `${(index + 1) * delayStep}ms` }}
+                            style={{
+                                animationDelay: `${(index + 1) * delayStep}ms`
+                            }}
                         >
                             <CustomText
                                 title={item.timeRange}
@@ -62,7 +64,9 @@ export default function Experience() {
                         <div
                             key={item.id}
                             className="mt-5 stagger-in"
-                            style={{ animationDelay: `${(educationTitleOrder + index + 1) * delayStep}ms` }}
+                            style={{
+                                animationDelay: `${(educationTitleOrder + index + 1) * delayStep}ms`
+                            }}
                         >
                             <CustomText
                                 title={item.timeRange}
