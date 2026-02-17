@@ -1,7 +1,7 @@
 export const defaultTheme = {
     colors: {
         primary: "bg-[#222222]",
-        secondary: "bg-[#141414]"
+        secondary: "bg-[#2E2C2C]"
     },
     text: {
         primary: "text-[#f3ede4]",

@@ -24,7 +24,7 @@ export default function Tabbed({
             className={`
                 border-[1px]
                 border-gray-300/10
-                hover:border-gray-300/20
+                hover:border-gray-300/17
                 items-center
                 ${paddingOptions[padding]}
                 ${roundedOptions[rounded]}
