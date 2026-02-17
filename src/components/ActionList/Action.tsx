@@ -25,7 +25,7 @@ export default function Action({ text, value, icon, link, backgroundColor = "sec
                 p-3
                 rounded-lg
                 border-[1px]
-                border-gray-300/15
+                border-gray-300/10
                 hover:border-gray-300/15
                 hover:bg-gray-300/15
                 hover:cursor-pointer
