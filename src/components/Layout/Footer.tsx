@@ -11,7 +11,8 @@ export default function Footer() {
     const hasOverlap = useScrollOverlap("bottom")
 
     useEffect(() => {
-        setLoadTime(performance.now())
+        const loadingTime = Math.round(performance.now())
+        setLoadTime(loadingTime/1000)
 
         const handleResize = () => {
             setScreenSize({
@@ -47,7 +48,7 @@ export default function Footer() {
                 {screenSize.width}x{screenSize.height}
             </div>
             <div className="text-right">
-                loaded in {loadTime}ms
+                loaded in {loadTime}s
             </div>
         </div>
     )
