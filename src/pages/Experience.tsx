@@ -81,7 +81,7 @@ export default function Experience() {
                                     padding={2}
                                     margin={3}
                                     rounded="xl"
-                                    backgroundColor="primaryColor"
+                                    backgroundColor="primary"
                                 >
                                     {
                                         item.detailedDescription.completed ? (

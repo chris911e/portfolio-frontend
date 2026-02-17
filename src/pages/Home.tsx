@@ -31,7 +31,7 @@ export default function Home() {
 
     const SocialList = (
         <Tabbed>
-            <ActionList items={socialItems} link={false} />
+            <ActionList items={socialItems} link={false} backgroundColor="primary" />
         </Tabbed>
     )
 

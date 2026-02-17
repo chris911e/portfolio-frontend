@@ -6,9 +6,10 @@ interface ActionProps {
     icon: string
     value: string
     text: string
+    backgroundColor?: "primary" | "secondary"
 }
 
-export default function Action({ text, value, icon, link }: ActionProps) {
+export default function Action({ text, value, icon, link, backgroundColor = "secondary" }: ActionProps) {
     const [actionName, setActionName] = useState(text)
 
     const { theme } = useTheme()
@@ -16,7 +17,7 @@ export default function Action({ text, value, icon, link }: ActionProps) {
     return(
         <div
             className={`
-                ${theme.colors.secondary}
+                ${theme.colors[backgroundColor]}
                 flex
                 items-center
                 justify-between
@@ -25,7 +26,7 @@ export default function Action({ text, value, icon, link }: ActionProps) {
                 rounded-lg
                 border-[1px]
                 border-gray-300/5
-                hover:border-gray-300/15
+                hover:border-gray-300/50
                 hover:bg-gray-300/15
                 hover:cursor-pointer
                 w-full
