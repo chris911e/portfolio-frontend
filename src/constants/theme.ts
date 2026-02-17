@@ -1,12 +1,12 @@
 export const defaultTheme = {
     colors: {
-        primary: "bg-[#141414]",
-        secondary: "bg-[#222222]"
+        primary: "bg-[#222222]",
+        secondary: "bg-[#141414]"
     },
     text: {
-        primary: "text-white",
-        secondary: "text-[#909692]"
-    }
+        primary: "text-[#f3ede4]",
+        secondary: "text-[#87827B]"
+    },
 }
 
 export type Theme = typeof defaultTheme
