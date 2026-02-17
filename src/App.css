@@ -13,5 +13,47 @@
 
 .stagger-in {
 	opacity: 0;
-	animation: staggerIn 0.45s ease-out forwards;
+	animation: staggerIn 0.35s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-16px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideInRight {
+	from {
+		opacity: 0;
+		transform: translateX(16px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.slide-in-left-desktop,
+.slide-in-right-desktop {
+	opacity: 1;
+}
+
+@media (min-width: 768px) {
+	.slide-in-left-desktop,
+	.slide-in-right-desktop {
+		opacity: 0;
+	}
+
+	.slide-in-left-desktop {
+		animation: slideInLeft 0.4s ease-out forwards;
+	}
+
+	.slide-in-right-desktop {
+		animation: slideInRight 0.4s ease-out forwards;
+	}
 }
