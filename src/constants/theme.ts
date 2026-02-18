@@ -46,6 +46,18 @@ export const themeOptions = [
     }
 ] 
 
+export function getThemeByName(themeName: string | null) {
+    if(!themeName) {
+        return defaultTheme
+    }
+
+    return themeOptions.find((option) => option.name === themeName)?.theme ?? defaultTheme
+}
+
+export function getThemeName(theme: Theme) {
+    return themeOptions.find((option) => option.theme.colors.primary === theme.colors.primary)?.name ?? themeOptions[0].name
+}
+
 
 export type Theme = typeof defaultTheme
 export type ThemeColorKey = keyof Theme["colors"]
