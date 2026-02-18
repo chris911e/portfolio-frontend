@@ -1,6 +1,7 @@
 import { useRef, useState } from "react"
 import { themeOptions } from "../constants/theme"
 import { useTheme } from "../context/ThemeContext"
+import Tabbed from "./Tabbed/Tabbed"
 
 export default function ThemeIcon() {
 	const { theme, setTheme } = useTheme()
@@ -35,30 +36,30 @@ export default function ThemeIcon() {
 		>
 			<button
 				type="button"
-				className={`
-					${theme.colors.secondary}
-					h-6
-					w-6
-					rounded-full
-					border-[1px]
-					border-gray-300/10
-					hover:border-gray-300/20
-					hover:cursor-pointer
-					flex
-					items-center
-					justify-center
-					transition-all
-					duration-200
-					${isOpen ? "scale-105" : "scale-100"}
-				`}
+				className="hover:cursor-pointer"
 				aria-label="Select theme"
 			>
-				<span className="sr-only">Theme selector</span>
-				<img
-					src="/icons/theme.svg"
-					alt=""
-					className="h-4 w-4 opacity-85"
-				/>
+				<Tabbed rounded="full" padding={0}>
+					<div
+						className={`
+							h-6
+							w-6
+							flex
+							items-center
+							justify-center
+							transition-all
+							duration-200
+							${isOpen ? "scale-105" : "scale-100"}
+						`}
+					>
+						<span className="sr-only">Theme selector</span>
+						<img
+							src="/icons/theme.svg"
+							alt=""
+							className="h-4 w-4 opacity-85"
+						/>
+					</div>
+				</Tabbed>
 			</button>
 
 			<div
