@@ -11,23 +11,23 @@ export const defaultTheme = {
 
 export const forestTheme = {
     colors: {
-        primary: "bg-[#0f1b15]",
-        secondary: "bg-[#182a22]"
+        primary: "bg-[#0b1611]",
+        secondary: "bg-[#13231c]"
     },
     text: {
-        primary: "text-[#f2f5ef]",
-        secondary: "text-[#9ca8a0]"
+        primary: "text-[#ecf2ed]",
+        secondary: "text-[#8e9d94]"
     }
 }
 
-export const twilightTheme = {
+export const lightTheme = {
     colors: {
-        primary: "bg-[#17131f]",
-        secondary: "bg-[#241f30]"
+        primary: "bg-[#ddd7cc]",
+        secondary: "bg-[#d1c9bc]"
     },
     text: {
-        primary: "text-[#f3eefc]",
-        secondary: "text-[#9e93b3]"
+        primary: "text-[#1f1f1f]",
+        secondary: "text-[#5f5951]"
     }
 }
 
@@ -41,8 +41,8 @@ export const themeOptions = [
         theme: forestTheme
     },
     {
-        name: "Twilight",
-        theme: twilightTheme
+        name: "Light",
+        theme: lightTheme
     }
 ] 
 
