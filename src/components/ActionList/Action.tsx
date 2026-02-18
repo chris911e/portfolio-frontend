@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { useTheme } from "../../context/ThemeContext"
 
 interface ActionProps {
@@ -10,7 +9,7 @@ interface ActionProps {
 }
 
 export default function Action({ text, value, icon, link, backgroundColor = "secondary" }: ActionProps) {
-    const [actionName, setActionName] = useState(text)
+
 
     const { theme } = useTheme()
 
@@ -35,12 +34,12 @@ export default function Action({ text, value, icon, link, backgroundColor = "sec
                 if(link) {
                     window.open(value, '_self')
                 } else {
-                    // ToDo: Real Notification anim, etc. in the future
-                    navigator.clipboard.writeText(value)
-                    setActionName("Copied!")
-                    setTimeout(() => {
-                        setActionName(text)
-                    }, 1000)
+                    if(value == "mail") {
+                        // only possiblity ?
+                        window.location.href = 'mailto:christopherscheel99@gmail.com'
+                    } else {
+                        window.open(value, '_blank')
+                    }
                 }
             }}
         >
@@ -51,10 +50,10 @@ export default function Action({ text, value, icon, link, backgroundColor = "sec
                     height={25}
                     width={25}
                 />
-                {actionName}
+                {text}
             </div>
             <img
-                src={link ? "/icons/arrow.svg" : "/icons/copy.svg"}
+                src={link ? "/icons/arrow.svg" : "/icons/external.svg"}
                 alt="?"
                 height={25}
                 width={25}

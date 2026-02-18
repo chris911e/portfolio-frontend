@@ -15,9 +15,9 @@ export default function Home() {
     const desktopRightDelay = desktopSideDelay + delayStep;
 
     const socialItems = [
-        ["Github", "chris911e"],
-        ["Discord", "piffels"],
-        ["Email", "christopherscheel99@gmail.com"]
+        ["Github", "https://www.github.com/chris911e"],
+        ["LinkedIn", "https://www.linkedin.com/in/christopher-scheel-80723122b"],
+        ["Email", "mail"]
     ];
 
     const websiteItems = [
