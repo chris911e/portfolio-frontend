@@ -4,6 +4,7 @@ import Dot from "../components/Dot";
 import Profile from "../components/Profile";
 import Tabbed from "../components/Tabbed/Tabbed";
 import Tag from "../components/Tabbed/Tag";
+import ThemeIcon from "../components/ThemeIcon";
 import Time from "../components/Time";
 import Typewriter from "../components/Typewriter";
 
@@ -81,15 +82,16 @@ export default function Home() {
                 </div>
 
                 <div
-                    className="flex gap-2 text-sm text-[#909692] stagger-in"
+                    className="flex gap-2 text-sm text-[#909692] items-center stagger-in"
                     style={{ animationDelay: `${3 * delayStep}ms` }}
                 >
-                    <Time timeZone="Europe/Berlin" /> · UTC+1
+                    <Time timeZone="Europe/Berlin" /> ·
+                    <ThemeIcon />
                 </div>
 
                 {/* To Do: Red/Green based off of status via API */}
                 <div
-                    className="stagger-in"
+                    className="stagger-in flex gap-2"
                     style={{ animationDelay: `${4 * delayStep}ms` }}
                 >
                     <Tag>
