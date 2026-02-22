@@ -23,7 +23,7 @@ export default function Home() {
     const websiteItems = [
         ["Experience", "/experience"],
         ["Projects", "/projects"],
-        ["Study", "/study"]
+        ["Chat", "/chat"]
     ];
 
     const typewriterWords = [
