@@ -39,17 +39,17 @@ export const textSizeOptions = {
 
 export const buttonColorOptions = {
     red: {
-        bg: "bg-red-500/70",
+        bg: "bg-red-500/80",
         shadow: "shadow-red-500/40",
         hoverShadow: "hover:shadow-red-500/90"
     },
     yellow: {
-        bg: "bg-yellow-400/70",
+        bg: "bg-yellow-400/80",
         shadow: "shadow-yellow-400/40",
         hoverShadow: "hover:shadow-yellow-400/90"
     },
     green: {
-        bg: "bg-green-500/70",
+        bg: "bg-green-500/80",
         shadow: "shadow-green-500/40",
         hoverShadow: "hover:shadow-green-500/90"
     }
