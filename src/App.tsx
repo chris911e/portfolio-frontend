@@ -3,6 +3,7 @@ import './App.css'
 import Layout from './components/Layout/Layout'
 import Home from './pages/Home'
 import Experience from './pages/Experience'
+import Chat from './pages/Chat'
 import NotFound from './pages/NotFound'
 import UnderConstruction from './pages/UnderConstruction'
 import { useTheme } from './context/ThemeContext'
@@ -19,7 +20,7 @@ export default function App() {
                   
                   <Route index element={<Home />} />
                   <Route path='/experience' element={<Experience />} />
-                  <Route path='/projects' element={<UnderConstruction />} />
+                  <Route path='/chat' element={<Chat />} />
                   <Route path='/study' element={<UnderConstruction />} />
                 </Route>
             </Routes>
