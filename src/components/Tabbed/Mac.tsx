@@ -18,7 +18,7 @@ export default function Mac({ children, link }: MacProps) {
                         <WindowButton color="green" href={link} />
                     </div>
 
-                    <div className="p-4 flex justify-center">
+                    <div className="p-5 flex justify-center">
                         {children}
                     </div>
                 </div>
