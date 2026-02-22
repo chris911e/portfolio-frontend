@@ -1,28 +1,12 @@
+import { buttonColorOptions } from "../../constants/tables"
+
 interface WindowButtonProps {
     color: "red" | "yellow" | "green"
     href: string
 }
 
-const colorStyles = {
-    red: {
-        bg: "bg-red-500/80",
-        shadow: "shadow-red-500/40",
-        hoverShadow: "hover:shadow-red-500/90"
-    },
-    yellow: {
-        bg: "bg-yellow-400/80",
-        shadow: "shadow-yellow-400/40",
-        hoverShadow: "hover:shadow-yellow-400/90"
-    },
-    green: {
-        bg: "bg-green-500/80",
-        shadow: "shadow-green-500/40",
-        hoverShadow: "hover:shadow-green-500/90"
-    }
-} as const
-
 export default function WindowButton({ color, href }: WindowButtonProps) {
-    const style = colorStyles[color]
+    const style = buttonColorOptions[color]
 
     return(
         <button
