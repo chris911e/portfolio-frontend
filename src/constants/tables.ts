@@ -37,4 +37,22 @@ export const textSizeOptions = {
     "5xl": "md:text-5xl text-4xl"
 }
 
+export const buttonColorOptions = {
+    red: {
+        bg: "bg-red-500/70",
+        shadow: "shadow-red-500/40",
+        hoverShadow: "hover:shadow-red-500/90"
+    },
+    yellow: {
+        bg: "bg-yellow-400/70",
+        shadow: "shadow-yellow-400/40",
+        hoverShadow: "hover:shadow-yellow-400/90"
+    },
+    green: {
+        bg: "bg-green-500/70",
+        shadow: "shadow-green-500/40",
+        hoverShadow: "hover:shadow-green-500/90"
+    }
+}
+
 export const colorOptions = defaultTheme.colors
