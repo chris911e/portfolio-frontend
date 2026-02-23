@@ -28,18 +28,18 @@ export const forestTheme = {
     }
 }
 
-export const lightTheme = {
+export const midnightTheme = {
     colors: {
-        primary: "bg-[#ddd7cc]",
-        secondary: "bg-[#d1c9bc]"
+        primary: "bg-[#0f172a]",
+        secondary: "bg-[#1e293b]"
     },
     text: {
-        primary: "text-[#1f1f1f]",
-        secondary: "text-[#5f5951]"
+        primary: "text-[#e2e8f0]",
+        secondary: "text-[#94a3b8]"
     },
     chat: {
-        cmd: "text-black-400/50",
-        caret: "caret-black/50"
+        cmd: "text-blue-300/60",
+        caret: "caret-blue-300/70"
     }
 }
 
@@ -53,8 +53,8 @@ export const themeOptions = [
         theme: forestTheme
     },
     {
-        name: "Light",
-        theme: lightTheme
+        name: "Midnight",
+        theme: midnightTheme
     }
 ] 
 
