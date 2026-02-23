@@ -26,7 +26,7 @@ export default function Accordion({
             className="hover:cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}
         >
-            <Tabbed>
+            <Tabbed backgroundColor="primary">
                 <div>
                     <div
                         className="
