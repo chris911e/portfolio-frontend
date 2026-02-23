@@ -4,7 +4,7 @@ import Dot from "../components/Dot";
 import Profile from "../components/Profile";
 import Tabbed from "../components/Tabbed/Tabbed";
 import Tag from "../components/Tabbed/Tag";
-import ThemeIcon from "../components/ThemeIcon";
+import ThemeIcon from "../components/ThemeIcon/ThemeIcon";
 import Time from "../components/Time";
 import Typewriter from "../components/Typewriter";
 

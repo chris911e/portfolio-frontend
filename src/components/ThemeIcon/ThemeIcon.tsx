@@ -1,7 +1,8 @@
 import { useRef, useState } from "react"
-import { themeOptions } from "../constants/theme"
-import { useTheme } from "../context/ThemeContext"
-import Tabbed from "./Tabbed/Tabbed"
+import { themeOptions } from "../../constants/theme"
+import { useTheme } from "../../context/ThemeContext"
+import Tabbed from "../Tabbed/Tabbed"
+import ThemeDot from "./ThemeDot"
 
 export default function ThemeIcon() {
 	const { theme, setTheme } = useTheme()
@@ -95,7 +96,7 @@ export default function ThemeIcon() {
 								items-center
 								justify-between
 								px-2
-								py-1.5
+								py-1
 								rounded-md
 								text-xs
 								hover:bg-gray-300/15
@@ -107,8 +108,8 @@ export default function ThemeIcon() {
 						>
 							<span>{option.name}</span>
 							<span className="flex items-center gap-1">
-								<span className={`h-2 w-2 rounded-full ${option.theme.colors.primary}`} />
-								<span className={`h-2 w-2 rounded-full ${option.theme.colors.primary}`} />
+								<ThemeDot color={option.theme.colors.primary} />
+								<ThemeDot color={option.theme.colors.secondary} />
 							</span>
 						</button>
 					)
