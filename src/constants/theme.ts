@@ -7,6 +7,10 @@ export const defaultTheme = {
         primary: "text-[#f3ede4]",
         secondary: "text-[#87827B]"
     },
+    chat: {
+        cmd: "text-green-400/50",
+        caret: "caret-green-400/50"
+    }
 }
 
 export const forestTheme = {
@@ -17,6 +21,10 @@ export const forestTheme = {
     text: {
         primary: "text-[#ecf2ed]",
         secondary: "text-[#8e9d94]"
+    },
+    chat: {
+        cmd: "text-green-400/50",
+        caret: "caret-green-400/50"
     }
 }
 
@@ -28,6 +36,10 @@ export const lightTheme = {
     text: {
         primary: "text-[#1f1f1f]",
         secondary: "text-[#5f5951]"
+    },
+    chat: {
+        cmd: "text-black-400/50",
+        caret: "caret-black/50"
     }
 }
 
