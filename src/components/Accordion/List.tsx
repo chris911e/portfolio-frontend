@@ -36,7 +36,7 @@ export default function List({ list }: ListProps) {
                                                 animate-pulse
                                             "
                                         >
-                                            -
+                                            •
                                         </span>
                                         <CustomText
                                             title={`${point}`}

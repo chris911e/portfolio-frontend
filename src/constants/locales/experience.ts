@@ -10,7 +10,7 @@ export const experience = {
                 logo: "SwissRe.png",
                 title: "Swiss Re",
                 shortTitle: "Swiss Re",
-                underTitle: "Part-Time · Zurich",
+                underTitle: "Part-Time, Zurich",
                 shortDescription: "Software Engineering Apprentice",
                 detailedDescription: {
                     teams: [
@@ -56,7 +56,7 @@ export const experience = {
                 logo: "ZHAW.jpg",
                 title: "ZHAW School of Engineering",
                 shortTitle: "ZHAW SoE",
-                underTitle: "Part-Time · Zurich",
+                underTitle: "Part-Time, Zurich",
                 shortDescription: "BSc of Sciences in Computer Science",
                 detailedDescription: {
                     info: [
@@ -78,7 +78,7 @@ export const experience = {
                 logo: "BBW.jpg",
                 title: "BBW Vocational Training School",
                 shortTitle: "BBW",
-                underTitle: "Part-Time · Zurich",
+                underTitle: "Part-Time, Zurich",
                 shortDescription: "Swiss Certificate of Competence in Software Engineering",
                 detailedDescription: {
                     info: [
