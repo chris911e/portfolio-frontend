@@ -7,6 +7,7 @@ import Divider from "../Divider";
 interface AccordionProps {
     children: ReactNode
     title: string
+    shortTitle?: string
     underTitle?: string
     logo: string
     description: string
@@ -16,6 +17,7 @@ export default function Accordion({
     children,
     logo,
     title,
+    shortTitle,
     description,
     underTitle
 }: AccordionProps) {
@@ -56,6 +58,7 @@ export default function Accordion({
                             <div>
                                 <CustomText
                                     title={title}
+                                    shortTitle={shortTitle}
                                 />
                                 {
                                     underTitle && (

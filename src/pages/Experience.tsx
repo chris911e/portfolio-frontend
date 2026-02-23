@@ -39,6 +39,7 @@ export default function Experience() {
                                 <Accordion
                                     logo={item.logo}
                                     title={item.title}
+                                    shortTitle={item.shortTitle}
                                     underTitle={item.underTitle}
                                     description={item.shortDescription}
                                 >
@@ -76,6 +77,7 @@ export default function Experience() {
                                 <Accordion
                                     logo={item.logo}
                                     title={item.title}
+                                    shortTitle={item.shortTitle}
                                     underTitle={item.underTitle}
                                     description={item.shortDescription}    
                                 >
