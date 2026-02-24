@@ -3,11 +3,11 @@ import CustomText from "../Titles/CustomText"
 interface ListItem {
     id: number,
     title: string,
-    points: string[]
+    points: readonly string[]
 }
 
 interface ListProps {
-    list: ListItem[]
+    list: readonly ListItem[]
 }
 
 export default function List({ list }: ListProps) {
