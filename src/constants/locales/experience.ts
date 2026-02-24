@@ -103,6 +103,31 @@ export const experience = {
                     grade: 5.7
                 }
             }
-        ]
+        ],
     }
-}
+} as const
+
+export const projects = [
+    {
+        id: 1,
+        name: "Home Infra",
+        preview: "/gif/infra.gif",
+        shortDescription: "Home CI/CD Infrastructure workflow for personal projects",
+        tags: [
+            "CI/CD", "FluxCD", "GitOps", "Kubernetes", "GitHub Actions"
+        ],
+        github: "https://github.com",
+        status: "active"
+    },
+    {
+        id: 2,
+        name: "Portfolio",
+        preview: "/gif/portfolio.gif",
+        shortDescription: "Fullstack portfolio site, fully integrated with my CI/CD workflow",
+        tags: [
+            "React.js", "TypeScript", "Vite", "Golang", "GitHub Actions"
+        ],
+        github: "https://github.com",
+        status: "inactive"
+    },
+] as const

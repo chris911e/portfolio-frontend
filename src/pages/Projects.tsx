@@ -2,31 +2,10 @@ import Divider from "../components/Divider";
 import ProjectCard from "../components/ProjectCard";
 import Mac from "../components/Tabbed/Mac";
 import PrimaryTitle from "../components/Titles/PrimaryTitle";
-
-const projects = [
-    {
-        id: 1,
-        name: "Home Infra",
-        preview: "/gif/infra.gif",
-        shortDescription: "Home CI/CD Infrastructure workflow for personal projects",
-        tags: [
-            "CI/CD", "FluxCD", "GitOps", "Kubernetes", "GitHub Actions"
-        ],
-        github: "https://github.com"
-    },
-    {
-        id: 2,
-        name: "Portfolio",
-        preview: "/gif/portfolio.gif",
-        shortDescription: "Fullstack portfolio site, fully integrated with my CI/CD workflow",
-        tags: [
-            "React.js", "TypeScript", "Vite", "Golang", "GitHub Actions"
-        ],
-        github: "https://github.com"
-    },
-]
+import { projects } from "../constants/locales/experience";
 
 export default function Projects() {
+
     return(
         <div>
             <Mac link="/">
@@ -49,6 +28,7 @@ export default function Projects() {
                                     shortDescription={project.shortDescription}
                                     tags={project.tags}
                                     github={project.github}
+                                    status={project.status}
                                 />
                             ))
                         }
