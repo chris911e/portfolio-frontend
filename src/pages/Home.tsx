@@ -95,7 +95,7 @@ export default function Home() {
                     style={{ animationDelay: `${4 * delayStep}ms` }}
                 >
                     <Tag>
-                        <Dot color="#1d9339" />
+                        <Dot color="active" />
                         Systems Operational
                     </Tag>
                 </div>

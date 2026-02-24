@@ -7,18 +7,26 @@ interface ProjectCardProps {
     preview: string
     name: string,
     shortDescription: string
-    tags: string[]
+    tags: readonly string[]
     github: string
+    status: "active" | "inactive" | "archived"
 }
 
-export default function ProjectCard({ preview, name, shortDescription, tags, github }: ProjectCardProps) {
+export default function ProjectCard({
+    preview,
+    name,
+    shortDescription,
+    tags,
+    github,
+    status
+}: ProjectCardProps) {
     return (
         <div>
             <Tabbed backgroundColor="primary" rounded="lg">
                 <div className="h-fit flex flex-col gap-4">
                     <div className="fixed p-1">
                         <Tag>
-                            <Dot color="#1d9339" />
+                            <Dot color={status} />
                         </Tag>
                     </div>
                     <img

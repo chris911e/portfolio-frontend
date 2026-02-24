@@ -1,5 +1,7 @@
+import { dotColors } from "../constants/tables";
+
 interface DotProps {
-    color: string
+    color: "active" | "inactive" | "archived"
     size?: number
 }
 
@@ -17,13 +19,13 @@ export default function Dot({ color, size = 8 }: DotProps) {
                     opacity-75
                 "
                 style={{
-                    backgroundColor: color
+                    backgroundColor: `${dotColors[color]}`
                 }}
             ></span>
             <span
                 className="relative inline-flex rounded-full"
                 style={{
-                    backgroundColor: color,
+                    backgroundColor: `${dotColors[color]}`,
                     width: `${size}px`,
                     height: `${size}px`
                 }}
