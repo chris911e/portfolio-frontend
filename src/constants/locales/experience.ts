@@ -125,9 +125,9 @@ export const projects = [
         preview: "/gif/portfolio.gif",
         shortDescription: "Fullstack portfolio site, fully integrated with my CI/CD workflow",
         tags: [
-            "React.js", "TypeScript", "Vite", "Golang", "GitHub Actions"
+            "React.js", "TypeScript", "Vite", "Java", "GitHub Actions"
         ],
         github: "https://github.com",
-        status: "inactive"
+        status: "active"
     },
 ] as const
