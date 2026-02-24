@@ -7,7 +7,7 @@ export const paddingOptions = {
     3: "p-3",
     4: "p-4",
     5: "p-5"
-}
+} as const
 
 export const marginOptions = {
     0: "",
@@ -16,7 +16,7 @@ export const marginOptions = {
     3: "m-3",
     4: "m-4",
     5: "m-5"
-}
+} as const
 
 export const roundedOptions = {
     "sm": "rounded-sm",
@@ -24,7 +24,7 @@ export const roundedOptions = {
     "lg": "rounded-lg",
     "xl": "rounded-xl",
     "full": "rounded-full"
-}
+} as const
 
 export const textSizeOptions = {
     "sm": "md:text-sm text-xs",
@@ -35,7 +35,7 @@ export const textSizeOptions = {
     "3xl": "md:text-3xl text-2xl",
     "4xl": "md:text-4xl text-3xl",
     "5xl": "md:text-5xl text-4xl"
-}
+} as const
 
 export const buttonColorOptions = {
     red: {
@@ -53,6 +53,12 @@ export const buttonColorOptions = {
         shadow: "shadow-green-500/40",
         hoverShadow: "hover:shadow-green-500/90"
     }
-}
+} as const
+
+export const dotColors = {
+    active: "#1d9339",
+    archived: "#bc9a05f9",
+    inactive: "#ce1515f9"
+} as const
 
 export const colorOptions = defaultTheme.colors
