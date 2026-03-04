@@ -6,12 +6,35 @@ export const experience = {
         career: [
             {
                 id: 1,
+                timeRange: "March 2026 - Present",
+                logo: "AXA.png",
+                title: "AXA",
+                shortTitle: "AXA",
+                underTitle: "Part-Time, Zurich",
+                shortDescription: "DevOps Engineer Working Student",
+                detailedDescription: {
+                    teams: [
+                        {
+                            id: 1,
+                            title: "Tasks",
+                            points: [
+                                "Reproducable GitHub Actions CI/CD pipelines",
+                                "Standardized Test Concept for easier onboarding process",
+                                "DynaTrace Monitoring Widgets for Pod metrics to improve developer experience",
+                                "Microservice development and deployment via OpenShift + Kubernetes"
+                            ]
+                        },
+                    ]
+                }
+            },
+            {
+                id: 2,
                 timeRange: "August 2022 - July 2025",
                 logo: "SwissRe.png",
                 title: "Swiss Re",
                 shortTitle: "Swiss Re",
                 underTitle: "Part-Time, Zurich",
-                shortDescription: "Software Engineering Apprentice",
+                shortDescription: "Software Engineer Apprentice",
                 detailedDescription: {
                     teams: [
                         {
