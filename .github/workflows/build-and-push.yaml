@@ -10,8 +10,7 @@ jobs:
   environment:
     runs-on: ubuntu-latest
     outputs:
-      chartVersion: ${{ steps.chart.outputs.chartVersion }}
-      chartName: ${{ steps.chart.outputs.chartName }}
+      appVersion: ${{ steps.app.outputs.appVersion }}
     permissions:
       contents: read
     steps:
@@ -28,6 +27,13 @@ jobs:
 
         echo "Chart name: $NAME"
         echo "Chart version: $VERSION"
+
+    - name: Read App Version
+      id: app
+      run: |
+        APP_VERSION=$(tr -d '[:space:]' < VERSION)
+        echo "appVersion=$APP_VERSION" >> $GITHUB_OUTPUT
+        echo "App version: $APP_VERSION"
     
   docker:
     needs: environment
@@ -61,36 +67,6 @@ jobs:
         tags: |
           ghcr.io/${{ github.repository }}:latest
           ghcr.io/${{ github.repository }}:${{ github.sha }}
+          ghcr.io/${{ github.repository }}:${{ needs.environment.outputs.appVersion }}
         cache-from: type=gha
         cache-to: type=gha,mode=max
-
-  helm:
-    needs: [docker, environment]
-    runs-on: ubuntu-latest 
-    permissions:
-      contents: read
-      packages: write
-    steps:
-    - uses: actions/checkout@v4
-
-    - name: Log in to GitHub Container Registry
-      uses: docker/login-action@v3
-      with:
-        registry: ghcr.io
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Install Helm
-      run: |
-        curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
-
-    - name: Package Helm Chart
-      run: |
-        helm package helm/
-        mkdir -p helm-publish
-        mv ${{ needs.environment.outputs.chartName }}-${{ needs.environment.outputs.chartVersion }}.tgz helm-publish/
-    
-    - name: Upload Helm Chart
-      if: github.event_name == 'push'
-      run: |
-        helm push helm-publish/${{ needs.environment.outputs.chartName }}-${{ needs.environment.outputs.chartVersion }}.tgz oci://ghcr.io/${{ github.repository_owner }}

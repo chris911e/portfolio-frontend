@@ -18,10 +18,9 @@ export const experience = {
                             id: 1,
                             title: "Tasks",
                             points: [
-                                "Reproducable GitHub Actions CI/CD pipelines",
-                                "Standardized Test Concept for easier onboarding process",
-                                "DynaTrace Monitoring Widgets for Pod metrics to improve developer experience",
-                                "Microservice development and deployment via OpenShift + Kubernetes"
+                                "Extended regression tests across 4 JMeter test plans with BeanShell assertions, raising test coverage from 70% to 95%, including documentation",
+                                "Optimised test-data SQL queries through tighter scoping, cutting queried data volume by approx. 33%",
+                                "Remediated critical vulnerabilities through dependency upgrades, code refactoring and migration of Helm repositories",
                             ]
                         },
                     ]
@@ -50,22 +49,17 @@ export const experience = {
                             title: "Logging & Monitoring · September 2023 - July 2025",
                             points: [
                                 "Final Project",
-                                "Maintained and further developed a Self-Service-Portal used by the Operator Team for Event monitoring",
-                                "Maintained and created Azure DevOps pipelines for the deployment of applications within an extensive Kubernetes environment",
-                                "Deployed applications on Kubernetes using Helm Charts including infrastructure customization (Terraform)",
-                                "Developed Powershell Scripts for improvement of automated end-to-end (E2E) testing of Sharepoint applications",
-                                "Implemented automated tests for new features",
-                                "Created detailed documentation for new features and test cases"
+                                "Cut start-up load time of a legacy application by 30% by optimising data loading",
+                                "Refactored a legacy application (data structures, modular functions), improving performance by 20% and maintainability",
+                                "Maintained CI/CD pipelines for deploying applications to Kubernetes with Azure DevOps, Helm and Terraform",
                             ]
                         },
                         {
                             id: 3,
                             title: "Detection & Engineering · August 2022 - August 2023",
                             points: [
-                                "Developed KQL-Detection rules to identify malicious SMB file transfers initiated via C2 Framework (Cobalt Strike)",
-                                "Analyzed applications logs to identify potential vulnerabilities based on previous research",
-                                "Analyzed vulnerabilities based on the MITRE ATT&CK framework and DFIR reports",
-                                "Created detailed reports and documentation of analysis results with presentation"
+                                "Developeddetectionrules(KQL)formaliciousSMBfiletransfersviaCobaltStrike",
+                                "Analysed vulnerabilities using MITRE ATT&CK and presented findings to stakeholders",
                             ]
                         },
                     ]

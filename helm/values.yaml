@@ -1,8 +1,0 @@
-name: portfolio-frontend
-replicaCount: 2
-secret: ghcr-secret
-port: 8080
-
-image:
-  repository: ghcr.io/chris911e/portfolio-frontend
-  tag: latest

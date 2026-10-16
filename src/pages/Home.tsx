@@ -28,11 +28,9 @@ export default function Home() {
 
     const typewriterWords = [
         "Student @ ZHAW",
-        "Manga Reader",
-        "Camper & Hiker",
-        "DevSecOps & k8s",
-        "Typescript & Go",
-        "Java & Python"
+        "Working Student @ AXA",
+        "Kubernetes & Grafana",
+        "Python & Golang",
     ];
 
     const SocialList = (
