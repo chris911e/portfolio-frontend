@@ -84,10 +84,6 @@ jobs:
       run: |
         curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 
-    - name: Set Docker image tag in Helm values.yaml
-      run: |
-        sed -i "s/^\s*tag: .*/  tag: $GITHUB_SHA/" helm/values.yaml
-
     - name: Package Helm Chart
       run: |
         helm package helm/
@@ -98,27 +94,3 @@ jobs:
       if: github.event_name == 'push'
       run: |
         helm push helm-publish/${{ needs.environment.outputs.chartName }}-${{ needs.environment.outputs.chartVersion }}.tgz oci://ghcr.io/${{ github.repository_owner }}
-
-  trigger:
-    needs: [docker, helm, environment]
-    if: github.event_name == 'push'
-    runs-on: ubuntu-latest
-    steps:
-    - name: Trigger infra deployment
-      env:
-        TOKEN: ${{ secrets.INFRA_TOKEN }}
-      run: |
-        curl -L \
-          -X POST \
-          -H "Accept: application/vnd.github.v3+json" \
-          -H "Authorization: Bearer $TOKEN" \
-          https://api.github.com/repos/${{ github.repository_owner }}/infra/dispatches \
-          -d '{
-            "event_type": "deploy",
-            "client_payload": {
-              "chartVersion": "${{ needs.environment.outputs.chartVersion }}",
-              "chartName": "${{ needs.environment.outputs.chartName }}",
-              "repository": "${{ github.repository }}",
-              "triggeredBy": "${{ github.workflow }}"
-            }
-          }'
