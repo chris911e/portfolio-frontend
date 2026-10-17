@@ -129,9 +129,9 @@ export const projects = [
         id: 1,
         name: "Home Infra",
         preview: "/gif/infra.gif",
-        shortDescription: "Home CI/CD Infrastructure workflow for personal projects",
+        shortDescription: "Home Infrastructure for personal projects",
         tags: [
-            "CI/CD", "FluxCD", "GitOps", "Kubernetes", "GitHub Actions"
+            "Kubernetes", "Grafana", "ArgoCD", "GitOps", "Obsverability", "Virtualization"
         ],
         github: "https://github.com",
         status: "active"
@@ -140,9 +140,9 @@ export const projects = [
         id: 2,
         name: "Portfolio",
         preview: "/gif/portfolio.gif",
-        shortDescription: "Fullstack portfolio site, fully integrated with my CI/CD workflow",
+        shortDescription: "Portfolio site, fully integrated with my CI/CD workflow",
         tags: [
-            "React.js", "TypeScript", "Vite", "Java", "GitHub Actions"
+            "React.js", "TypeScript", "Vite", "GitHub Actions"
         ],
         github: "https://github.com",
         status: "active"
