@@ -1,6 +1,7 @@
 import ActionList from "../components/ActionList/ActionList";
 import Divider from "../components/Divider";
 import Dot from "../components/Dot";
+import PodOverview from "../components/PodOverview/PodOverview";
 import Profile from "../components/Profile";
 import Tabbed from "../components/Tabbed/Tabbed";
 import Tag from "../components/Tabbed/Tag";
@@ -41,10 +42,7 @@ export default function Home() {
 
     const DeploymentOverview = (
         <Tabbed>
-            <div className="flex flex-col items-center text-xs font-bold">
-                <img src="/load.svg" alt="" height={40} width={40} />
-                Feature is under construction
-            </div>
+            <PodOverview />
         </Tabbed>
     )
 
