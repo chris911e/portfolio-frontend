@@ -129,9 +129,9 @@ export const projects = [
         id: 1,
         name: "Home Infra",
         preview: "/gif/infra.gif",
-        shortDescription: "Home Infrastructure for personal projects",
+        shortDescription: "End to end reliable multi-stage home infrastructure self-hosted on my personal Home Lab for my personal projects",
         tags: [
-            "Kubernetes", "Grafana", "ArgoCD", "GitOps", "Obsverability", "Virtualization"
+            "Kubernetes", "Grafana", "ArgoCD", "GitOps", "Obsverability", "Logging", "Helm"
         ],
         github: "https://github.com",
         status: "active"
@@ -140,7 +140,7 @@ export const projects = [
         id: 2,
         name: "Portfolio",
         preview: "/gif/portfolio.gif",
-        shortDescription: "Portfolio site, fully integrated with my CI/CD workflow",
+        shortDescription: "Simple personal portfolio site, showcasing my experience & projects and served as test subject for my Home Infra",
         tags: [
             "React.js", "TypeScript", "Vite", "GitHub Actions"
         ],
