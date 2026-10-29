@@ -144,7 +144,7 @@ export const projects = [
         tags: [
             "React.js", "TypeScript", "Vite", "GitHub Actions"
         ],
-        github: "https://github.com",
+        github: "https://github.com/chris911e/portfolio-frontend",
         status: "active"
     },
 ] as const
