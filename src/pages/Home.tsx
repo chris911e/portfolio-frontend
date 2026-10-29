@@ -8,6 +8,7 @@ import Tag from "../components/Tabbed/Tag";
 import ThemeIcon from "../components/ThemeIcon/ThemeIcon";
 import Time from "../components/Time";
 import Typewriter from "../components/Typewriter";
+import version from "../../VERSION?raw";
 
 export default function Home() {
     const delayStep = 90;
@@ -130,7 +131,7 @@ export default function Home() {
                     className="text-sm text-[#909692] stagger-in"
                     style={{ animationDelay: `${8 * delayStep}ms` }}
                 >
-                    2026
+                    2026 · v{version.trim()}
                 </span>
             </div>
 
