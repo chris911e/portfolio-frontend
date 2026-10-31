@@ -133,7 +133,7 @@ export const projects = [
         tags: [
             "Kubernetes", "Grafana", "ArgoCD", "GitOps", "Obsverability", "Logging", "Helm"
         ],
-        github: "https://github.com",
+        github: "https://github.com/chris911e/helm",
         status: "active"
     },
     {
